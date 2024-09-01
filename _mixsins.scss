@@ -1,0 +1,15 @@
+@mixin displayFlaxFunction($display, $wrap, $ju-con, $al-it){
+    display: $display;
+    flex-wrap: $wrap;
+    justify-content: $ju-con;
+    align-items: $al-it;
+   
+}
+
+@mixin displayFlaxStandart(){
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: $gapVar;
+}

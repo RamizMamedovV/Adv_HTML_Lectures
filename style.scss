@@ -1,0 +1,53 @@
+@import 'vars';
+@import 'mixsins';
+
+body {
+    margin: 0;
+    padding: 0;
+   
+}
+
+// Наследование
+%font-normal{
+    font-family: sans-serif;
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: $widthSite;
+    margin: 0 auto;
+}
+
+container_clr_text {
+    color: $colorText;
+}
+
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    padding-left: 100px;
+    gap: $gapVar;
+    &__link {
+        color: $colorText;
+        @extend %font-normal;
+    }   
+  }
+  
+  .content {
+    //@include displayFlaxFunction(flex, nowrap, flex-end, center);
+    @include displayFlaxStandart();
+    //gap: $gapVar;
+    &__item {
+        width: $widthSite / 4;
+        height: 200px;
+        border: $borderVar;
+        // использование наследования
+    }
+    
+}
+
